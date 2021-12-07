@@ -16,7 +16,7 @@ stages:
       - npm
 
     variables:
-      wwwrootDir: 'ttailspin.SpaceGame.Web/wwwroot'
+      wwwrootDir: 'tailspin.SpaceGame.Web/wwwroot'
       dotnetSdkVersion: '5.x'
 
     steps:
@@ -93,6 +93,6 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Azure App Service Deploy: website'
             inputs:
-              azureSubscription: 'Resource Manager - ttailspin - Space Game'
+              azureSubscription: 'Resource Manager - tailspin - Space Game'
               appName: '$(WebAppNameDev)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
